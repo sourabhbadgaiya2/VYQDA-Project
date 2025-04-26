@@ -15,7 +15,7 @@ Each task is placed in its own folder with clean, readable, and modular code.
 
 You can preview the projects here:
 
-- 🔗 [Live Demo - Editable Table](https://vyqda-project-edit-table.vercel.app/)
+- 🔗 [Live Demo - Editable Table](https://vyqda-project-editable.vercel.app/)
 - 🔗 [Live Demo - User Dashboard](https://vyqda-project.vercel.app/)
 
 ---
@@ -28,7 +28,6 @@ You can preview the projects here:
 - Go to `Task - 2 User Dashboard` → Displays user data with search and pagination using API.
 
 ---
-
 
 ## 🛠️ Tech Stack
 

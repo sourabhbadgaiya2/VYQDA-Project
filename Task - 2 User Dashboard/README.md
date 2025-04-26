@@ -41,7 +41,7 @@ It fetches user data from a public API and displays it in a paginated, searchabl
 ### ⚙️ Installation
 
 ```bash
-git clone https://github.com/sourabhbadgaiya2/user-dashboard.git
+git clone https://github.com/sourabhbadgaiya2/VYQDA-Project.git
 cd user-dashboard
 npm install
 npm run dev
