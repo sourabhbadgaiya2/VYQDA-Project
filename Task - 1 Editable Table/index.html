@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React UMD Task - Editable Table</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      const App = () => {
+        const initialTasks = [
+          "Onboarding Call",
+          "Google Search Console Access",
+          "Google Analytics Access",
+          "Website Access",
+          "Technical Audit",
+          "Anchor Text and Semantic Analysis",
+          "Competitor Analysis",
+          "Anchor Text / URL Mapping",
+          "Google Data Studio Report + Local Reporting Suite",
+          "Site Level Optimization",
+          "On Page Optimization",
+          "Content Creation",
+          "Content Publishing",
+          "Premium Press Release",
+          "Authority Niche Placements",
+          "Review Management",
+          "Index Links",
+          "Video Recap",
+        ];
+
+        const [tasks, setTasks] = React.useState(initialTasks);
+
+        const handleChange = (index, value) => {
+          const updated = [...tasks];
+          updated[index] = value;
+          setTasks(updated);
+        };
+
+        const handleSubmit = () => {
+          console.log("POST-ready data:", tasks);
+          alert("Check console for POST-ready data!");
+        };
+
+        return (
+          <div>
+            <h2>MONTH 1</h2>
+            <table>
+              <tbody>
+                {tasks.map((task, index) => (
+                  <tr key={index}>
+                    <td>
+                      <input
+                        type='text'
+                        value={task}
+                        onChange={(e) => handleChange(index, e.target.value)}
+                      />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <button onClick={handleSubmit}>Submit</button>
+          </div>
+        );
+      };
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>
